@@ -1,60 +1,47 @@
 # Git commands 
 
-## Repository erstellen / klonen / anbinden
-### Lokales repo ertsellen
+## Repository creation/cloning
+### initalize a local repository
 `git init`
-### Repo klonen
+### clone a remote repository
 `git clone "URL"`
-### Aktualisieren der Remote URL
+### change remote url
 `git remote set-url origin "URL"`
 
-## Stage & Snapshot
-
-### Repo Status
+## Stage & snapshot (local)
+### Repo status
 `git status`
-
 ### File stagen
 `git add "file"`
-
 ### Alle Files stagen
 `git add -A`
 
-
-
-## Remote synchronisation
-
-### Anpassungen ins Git aufnehemen
+## Synchronise with remote repository
+### commit staged changes
 `git commit -m "commit message"`
-
-### commit all changes:
+### commit ALL changes
 ```
 git commit -a -m "Message"
 Convetion "feature: message"
 ```
-
-### Anpassungen von Remote einpflegen
+### pull changes from remote source
 `git pull`
-
-### Anpassungen von lokal nach remote einpflegen
+### push changes to remote source
 `git push `
 
-
 ## Branch & Merge
-
-### Branch auschecken/wechseln:
+### checkout/switch branch:
 `git checkout`
-
-### Branch erstellen:
+### create a new branch:
 ```
 git checkout -b
-(Nameconvention: prefix/name des features)
+(Nameconvention: prefix/name ot the feature)
 z.B feature/blabla
 z.B docs/readme
 ```
 
 ## Setup
-
-### git config:
+### General git config commands:
 `git config --global user.email "you@example.com"`<br>
 `git config --global user.name "Your Name"`<br>
 `git config --list`
