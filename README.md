@@ -1,11 +1,11 @@
-#Markdown Basics:
+# Markdown Basics:
 
-##Formatierung (Titel)
+## Formatierung (Titel)
 	# Haupttitel
 	## Untertitel
 	### Unter-Unter-Titel
 
-##Textformatierung
+## Textformatierung
 	** Fett Formatierter Text **
 	* Kursiver Text *
 	` Formatierung als Code `
@@ -13,7 +13,7 @@
 	Zeile 2 ```
 	> Block Quote (Zitat)
 
-##Listen
+## Listen
 	Geordnete Liste
 		1. Eins
 		2. Zwei
