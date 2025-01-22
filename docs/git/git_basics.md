@@ -56,3 +56,16 @@ In case of fire:
 You should **ALWAYS** commit and push made changes to the remote source before leaving.<br>
 Loosing the hard earned chages made in a working day would be a catastrophe and we have to set priorities.<br>
 Our health isn't that important anyway. :)
+
+## SSH
+
+SSH-Key gernerieren und bei Git & Github hinterlegen
+
+- `ssh-keygen -C "michael.gassser@hftm.ch" -t ed25519`
+- Dienste -> "OpenSSH Authentication Agent" starten 
+- `ssh-add C:\Users\Micha\.ssh\id_ed25519`
+
+- Globale git config anpassen:<br>
+ `git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe`
+- In Github unter 'Settings' den key eintragen
+- Testen: `ssh git@github.com` sollte "PTY allocation request failed on channel 0" 

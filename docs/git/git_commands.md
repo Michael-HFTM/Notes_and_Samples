@@ -46,4 +46,8 @@ z.B docs/readme
 `git config --global user.name "Your Name"`<br>
 `git config --list`
 
+## History
+
+### Commit history anzeigen<br>
+`git log` 
 
