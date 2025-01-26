@@ -4,11 +4,11 @@
 Sytemdokumentation unterteilt in sections:
 
 1.  Executable programs or shell commands
-2. System calls (functions provided by the kernel)
-3. Library calls (functions within program libraries)
+2.  System calls (functions provided by the kernel)
+3.  Library calls (functions within program libraries)
 4.  Special files (usually found in /dev)
-5. File formats and conventions, e.g. /etc/passwd
-6. Games
+5.  File formats and conventions, e.g. /etc/passwd
+6.  Games
 7.  Miscellaneous
 8.  System administration commands (usually only for root)
 9.  Kernel routines
@@ -76,3 +76,134 @@ $ ls user??.txt
 ```
 - `*` steht für beliebig viele Zeichen im Dateinamen
 `$ ls *.txt`
+
+## Benutzer
+
+### Allgemeines
+
+- Benutzer sind in Datenbanken definiert
+- Lokale Benutzer definiert in `/etc/passwd`, siehe `passwd(5)`
+- Andere Datenbanken möglich, z. B. LDAP, SQL oder NIS
+- Primary Key ist die User ID
+- UID kann 16 bit (0 – 65535) oder 32 bit sein (0 – 4294967295)
+- UID 0 ist reserviert für root
+
+**Felder eines Eintrages in /etc/passwd**
+- `name` - Login Name des Benutzers, z.B. root
+- `password` - Passwort des Benutzers, siehe shadow(5)
+- `UID` - User ID des Benutzers
+- `GID` - Primary Group ID des Benutzers
+- `GECOS` - Informationen über den Benutzer (Einzieges Feld welches frei Benutzt werden kann)
+- `directory` - Pfad des Home Directory des Benutzers
+- `shell Pfad` - zur Shell des Bentuzers
+
+Besipiel Einträge:
+```
+root:x:0:0:hroot:/root:/bin/bash
+bruno:x:1000:1000:bruno:/home/bruno:/bin/bash
+```
+**User root**
+- User root – genauer UID 0 – darf alles machen
+- root auf Linux entspricht dem Administrator auf Windows
+- Meist hat root kein gültiges Passwort
+- Jedem Admin seinen persönlichen Account
+
+Übung 1:
+`sudo userasadd -c "Bertha Beispiel" -e 2025-03-31 -G sudo -m bertha`
+
+
+## Gruppen
+
+### Allgemeines 
+- Gruppen sind in Datenbanken definiert
+- Lokale Benutzer definiert in /etc/group, siehe group(5)
+- Andere Datenbanken möglich, z. B. LDAP, SQL oder NIS
+- Primary Key ist die Group ID
+- GID kann 16 bit (0 – 65535) oder 32 bit sein (0 – 4294967295)
+- GID 0 ist reserviert für root
+
+**Felder eines Eintrages in /etc/group**
+- `group_name` - Name der Gruppe
+- `password` - Gruppen können Passwörter haben
+- `GID Primary` - Group ID des Benutzers
+- `user_list` - Namen der Benutzer in der Gruppe
+
+## Berechtigungen 
+- Jede Datei hat einen Owner
+- Jede Datei hat eine Group
+- Wer nicht Owner oder Mitglied von Group ist, ist World
+
+```
+-rw-r--r-- 1 bruno bruno 3771 Jan 18 15:09 .bashrc
+
+-|re-|r--|r--| |1| |bruno| |bruno| |3771| |Jan 18 15:09| |.bashrc
+```
+- `-` = (File)Type
+- `re-` = Userrechete
+- `r--` = Group
+- `r--` = World
+- `1` = Hard links (Verknüpfgung auf den Inhalt)
+- `bruno` = Owner
+- `bruno` = Group
+
+### Vier Bits für die Rechte:
+- `r` - Read (Pos 1)
+- `w` - Write (Pos 2)
+- `x` - eXecute (Pos 3)
+- `s` - Special (Pos1)
+
+*Jeweils einmal definiert für Owner, Group und World <br>
+Alle Dateien haben diese Rechte,* ***immer!***
+
+### Special Bit (Advanced):
+- `SUID` - Special Bit auf Stufe User = Set User ID (Pos1-User)
+- `SGID` - Special Bit auf Stufe Group = Set Group ID (Pos1-Group)
+- `Sticky` - Bit Special Bit auf Stufe World (Pos1-World)
+
+### Darstellungsformen von Rechten
+- Als Text - Bsp: `rwx-w-r-x`
+- Als Oktalzahl - Bsp: `4725` 
+[https://de.wikipedia.org/wiki/Unix-Dateirechte]
+
+### File attributes
+- Windows: `AHRS`
+- Linux: `aAcCdDeFiIjmNPsStTuxV`
+- Anzeigen mittels `lsattr(1)`
+- Ändern mittels `chattr(1)`
+- Attribut `i` – Immutable 
+
+### Access Control Lists (ACLs)
+- POSIX-1003.1e vs RFC 3010
+- Selbes Prinzip wie bei Windows
+- Lesen von ACLs mittels `getfacl(1)`
+- Schreiben von ACLs mittels `setfacl(1)`
+- Technische Beschreibung in `acl(5)`
+
+## sudo
+- `su(1)` Substitute User and Group ID
+- `sudo(8)` Execute a command as another user
+- Umfangreiche Konfigurationsmöglichkeiten mittels `sudoers(5)`
+- `/etc/sudoers` und `/etc/sudoers.d/*`
+- Beispiele:
+```
+pgadmin server = (pg) ALL
+pgbackup server = (pg) pg_dump
+
+user | servername = gruppe | kommandos
+```
+- Eintrag für volle Rechte von root: <br>
+`%sudo ALL = (ALL:ALL) ALL`
+
+
+### Tipps:
+- Kein `visudo(8)` – kein Mitleid! (prüft auf syntaxfehler)
+**Nicht machen:**
+- Permanent als root arbeiten
+- `bruno@server:~$ sudo su -`
+- Übermässiger Einsatz von `NOPASSWD:`
+
+
+Kilobyte = 1024
+ToDo: *Hier Hardlinks und Softlinks ergänzen*
+-  Hardlinks (Verknüpfung direk auf den Inhalt (Daten werden erst gelöscht wenn alle HArdlinks auf den Inhalt weg sind.))
+- Softlinks (Verknüpfung wie bei Windows)

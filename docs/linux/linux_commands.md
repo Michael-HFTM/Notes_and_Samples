@@ -10,10 +10,12 @@
 *press / to start search in man, jump to next with `u`* <br>
 *`man 2 "command"` shows the sepcified man page of this command*
 - `Crtl+D` log out
+- `Ctrl+C` abbrechen
 
 ## Working tree
 - `cd` *(change directroy)*
 - `..` back one directory
+- `cd /` cd to root directory
 - `ls` lists all files in directory
 - `ls -al` lists all files including 
 - `find` Findet Dateien im Dateisystem
@@ -23,7 +25,7 @@
 - `more` Zeigt den Inhalt von Dateien
 - `less` Zeigt den Inhalt von Dateien
 - `cat` Verknuepft die Inhalte von Dateien
-- `head` Zeigt die ersetn Zeilen einer Datei an
+- `head` Zeigt die ersten Zeilen einer Datei an
 - `tail` Zeigt die letzten Zeilen einer Datei an
 - `grep` *(Global Regular Expression Printer)* Durchsucht den Inhalt von Dateien (Regex)
 - `rm` *(Remove)* Löscht die Datei
@@ -45,3 +47,12 @@ Ex. `bruno@server:~$ ls >> verzeichnis.txt`
 Ex. `bruno@server:~$ ls | grep novelle.txt`
 - Eingabe aus einer Datei: `<`<br>
 Ex. `bruno@server:~$ mail –s “Testmail” bruno.flueckiger@hftm.ch < email.txt`
+
+## Usermanagement
+- Userhinzufügen `sudo useradd [options] LOGIN` <br> *LOGIN=user login name*
+ToDo: *Wichtigste Parameter ergänzen*
+
+- User modifizieren `sudo usermod [options] LOGIN` 
+- User löschen `sudo userdel [options] LOGIN` 
+
+ToDo: *Gruppen commands ergänzen*
