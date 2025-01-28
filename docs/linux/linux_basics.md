@@ -196,7 +196,7 @@ user | servername = gruppe | kommandos
 
 
 ### Tipps:
-- Kein `visudo(8)` – kein Mitleid! (prüft auf syntaxfehler)
+- Kein `visudo(8)` – kein Mitleid! (prüft auf syntaxfehler) <br>
 **Nicht machen:**
 - Permanent als root arbeiten
 - `bruno@server:~$ sudo su -`
