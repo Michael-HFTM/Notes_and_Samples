@@ -47,4 +47,4 @@ In chmod(1) steht wie das geht.
 
 - In das Directory wechseln in dem sich das Directory 'gugus' befindet.
 - Rechte anpassen:<br>
-`sudo chown -v -R 2770 ./gugus` (`./` vor der Dateibezeichnung ist in diesem Fall optional)
+`sudo chmod -v -R 2770 ./gugus` (`./` vor der Dateibezeichnung ist in diesem Fall optional)
