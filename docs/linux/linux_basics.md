@@ -150,19 +150,37 @@ bruno:x:1000:1000:bruno:/home/bruno:/bin/bash
 - `r` - Read (Pos 1)
 - `w` - Write (Pos 2)
 - `x` - eXecute (Pos 3)
-- `s` - Special (Pos1)
+- `s` - Special (Pos3)
 
 *Jeweils einmal definiert für Owner, Group und World <br>
 Alle Dateien haben diese Rechte,* ***immer!***
 
 ### Special Bit (Advanced):
-- `SUID` - Special Bit auf Stufe User = Set User ID (Pos1-User)
-- `SGID` - Special Bit auf Stufe Group = Set Group ID (Pos1-Group)
-- `Sticky` - Bit Special Bit auf Stufe World (Pos1-World)
+- `SUID` - Special Bit auf Stufe User = Set User ID (Pos3-User)
+- `SGID` - Special Bit auf Stufe Group = Set Group ID (Pos3-Group)
+- `Sticky` - Bit Special Bit auf Stufe World (Pos3-World)
 
 ### Darstellungsformen von Rechten
 - Als Text - Bsp: `rwx-w-r-x`
 - Als Oktalzahl - Bsp: `4725` 
+<br><br>
+- Pos1 (hier 4) definiert die special bits
+- Pos2 (hier 7) definiert die Rechte auf Stufe Owner
+- Pos3 (hier 2) definiert die Rechte auf Stufe Group
+- Pos4 (hier 5) definiert die Rechte auf Stufe World
+
+Bei Stufe Owner,Group und World hat jede Berechihgunsart einen Wert:
+- Read = 1
+- Write = 2
+- Execute = 4
+Diese könne beliebig kombiniert werden. 3 wäre somit Read & Write, 7 vergibt alle drei Rechte
+
+Für die special Bits ist es 'ähnlich':
+- Sicky = 1
+- SGID = 2
+- SUID = 4
+
+Siehe auch:
 [https://de.wikipedia.org/wiki/Unix-Dateirechte]
 
 ### File attributes
