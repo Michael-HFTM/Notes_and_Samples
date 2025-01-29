@@ -17,7 +17,7 @@
 - `..` back one directory
 - `cd /` cd to root directory
 - `ls` lists all files in directory
-- `ls -al` lists all files including 
+- `ls -al` lists all files including hidden files
 - `find` Findet Dateien im Dateisystem
 
 
@@ -38,7 +38,7 @@
 
 
 ## Umleitungen
-
+**WICHTIG!**
 - Ausgabe in eine Datei (überschreiben): `>` <br>
 Ex. `bruno@server:~$ ls > verzeichnis.txt`
 - Ausgabe in eine Datei (anhängen): `>>`<br>
@@ -49,10 +49,24 @@ Ex. `bruno@server:~$ ls | grep novelle.txt`
 Ex. `bruno@server:~$ mail –s “Testmail” bruno.flueckiger@hftm.ch < email.txt`
 
 ## Usermanagement
-- Userhinzufügen `sudo useradd [options] LOGIN` <br> *LOGIN=user login name*
-ToDo: *Wichtigste Parameter ergänzen*
+*LOGIN=user login name*
+- Userhinzufügen - `sudo useradd [options] LOGIN` - [Man-Page](https://man7.org/linux/man-pages/man8/useradd.8.html)
+- User modifizieren - `sudo usermod [options] LOGIN` - [Man-Page](https://man7.org/linux/man-pages/man8/usermod.8.html)
+- User löschen - `sudo userdel [options] LOGIN` - [Man-Page](https://man7.org/linux/man-pages/man8/userdel.8.html)
+- Passwort / Passwortpoliecies anpassen - `sudo passwd [options] [LOGIN]` - [Man-Page](https://man7.org/linux/man-pages/man1/passwd.1.html)
+- Passwortpolicies anpssen/prüfen - `sudo chage [option] LOGIN` - [Man-Page](https://man7.org/linux/man-pages/man1/chage.1.html)
+- 'Finger' Info anpassen - `chfn [options] LOGIN` - [Man-Page](https://man7.org/linux/man-pages/man1/chfn.1.html)
+- Gruppen des Users anzeigen - ` groups [OPTION]... [USERNAME]...` - [Man-Page](https://man7.org/linux/man-pages/man1/groups.1.html)
+- GruppenIDs des Users anzeigen - `id [OPTION]... [USER]...` - [Man-Page](https://man7.org/linux/man-pages/man1/id.1.html)
 
-- User modifizieren `sudo usermod [options] LOGIN` 
-- User löschen `sudo userdel [options] LOGIN` 
+## Groupmanagement 
+- Gruppe hinzufügen - `groupadd [OPTIONS] NEWGROUP` - [Man-Page](https://man7.org/linux/man-pages/man8/groupadd.8.html)
+- Gruppe modifizieren - `groupmod [options] GROUP` - [Man-Page](https://man7.org/linux/man-pages/man8/groupmod.8.html)
+- Gruppe modifizieren - `groupdel [options] GROUP` - [Man-Page](https://man7.org/linux/man-pages/man8/groupdel.8.html)
 
-ToDo: *Gruppen commands ergänzen*
+## Berechtigungen
+- Berechtigunen des akitven users anzeigen: `sudo -l`
+- Modes/Owner/Gruppe anzeigen - `ls -al [FILE_NAME]`
+- Filemode anpassen - `chmod [OPTION]... OCTAL-MODE FILE...` - [Man-Page](https://www.man7.org/linux/man-pages/man1/chmod.1.html)
+- Primärgruppe eines Files anpassen - `chgrp [OPTION]... GROUP FILE...` - [Man-Page](https://man7.org/linux/man-pages/man1/chgrp.1.html)
+- Owner eines Files anpassen - `chown [OPTION]... [OWNER][:[GROUP]] FILE...` - [Man-Page](https://man7.org/linux/man-pages/man1/chown.1.html)
