@@ -40,6 +40,16 @@ z.B feature/blabla
 z.B docs/readme
 ```
 
+`git stash` - Speichert nicht commitete änderungen in einem Zwischenspeicher
+`git stash apply` - Merged die zwischengespeicherten änderungen wieder in den Workspace
+
+`git tag` - Listet alle Tags auf
+`git tag "Versionbezeichnung"` - erstellt einen Tag von einem commit
+`git tag -d "Versionsbezeichnung"` - entfernt den angegebenen Tag
+
+`git push -f` - macht einen push inkl. Tags
+`git push --tags` - macht einen push inkl. Tags
+
 ## Setup
 ### General git config commands:
 `git config --global user.email "you@example.com"`<br>

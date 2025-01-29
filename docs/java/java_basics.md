@@ -56,6 +56,8 @@ Codeblock Ende
 - double ( 64 Bit ) `double x = 3.141592;`
 
 
+- char (16 Bit) `char x = 'A';`
+
 
 ### Variable Deklarieren und später zuweisen
 ```
@@ -121,3 +123,17 @@ int newId = id++;
 - `final` - Deklariert eine Variable um den Wert unveränderbar zu machen (immutable)<br>
 *Namesnkonventionenen für finale Variabelen:*<br>
 *Nur Grossbuchstaben & Woerte werden mit* `_` *getrennt. Bsp:* `GESCHWINDIGKEIT_DES_LICHTS`
+
+
+## Escape-Sequenzen
+Ein Zeichen, angeführt von einem Backslash wird Escape-Sequenz genannt und hat für den Compiler eine spezielle Bedeutung.
+
+Escape-Sequenz Beschreibung
+- `\t` Fügt einen Tabulator ein
+- `\b` Fügt einen Backspace ein
+- `\n` Fügt eine neue Zeile ein
+- `\r` Führt einen Wagenrücklauf ein
+- `\f` Fügt ein Formfeed ein
+- `\'` Fügt ein Hochkommata ein
+- `\"` Fügt ein Anführungszeichen ein
+- `\\` Fügt einen Backslash ein
