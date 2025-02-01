@@ -48,3 +48,6 @@ In chmod(1) steht wie das geht.
 - In das Directory wechseln in dem sich das Directory 'gugus' befindet.
 - Rechte anpassen:<br>
 `sudo chmod -v -R 2770 ./gugus` (`./` vor der Dateibezeichnung ist in diesem Fall optional)
+<br><br>
+*Ergänzung:*<br>
+`find gugus/ -type d -exec chmod 2770 {} \;` - Saubere Lösung für den Fall das im Verzeichnissbaum auch Dateien und nicht nur Directories enthalten sind.

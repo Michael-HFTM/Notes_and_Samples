@@ -19,6 +19,7 @@
 - `ls` lists all files in directory
 - `ls -al` lists all files including hidden files
 - `find` Findet Dateien im Dateisystem
+- `cp` Kopiert Datein oder Verzeichnisse
 
 
 ## Files & Verzeichnisse

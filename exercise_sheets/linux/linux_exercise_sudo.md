@@ -55,7 +55,7 @@ es eine gute Idee, lokale sudo Policies eigene Dateien zu schreiben und diese in
 /etc/sudoers.d/ zu platzieren?
 
 **Lösung:**
-- Vermutlich wird dies Datei mit einem Systemupdate auch aktualisiert, auslagern von Modifikationen vereinfacht dies und veringert auch die Warhscheinlichkeit das Syntaxfehler an der Hauptdatei gemacht werden, welche das ganze Berechtiugnssytem unbrauchbar machen würden. 
+- Vermutlich wird dies Datei mit einem Systemupdate auch aktualisiert, auslagern von Modifikationen verhindert dass Bearbeitungen bei einem Update verloren gehen. 
 
 ## Übung 4
 >Zeige mit ls -al /etc/sudoers die Berechtigungen der Datei an. Überlege dir
@@ -67,5 +67,4 @@ Datei gesetzt sind.
 - Berechtigungen der Datei 'sudoers' anzeigen: <br>
 `ls -al /etc/sudoers` 
 - Die Brechetigungen sind 'r--r-----' zudem gehört die Datei dem user root und der Gruppe root an.<br>
-Ich vermute dass die Berechtigungen so restriktiv sind um unbeabsichtigt Anpassungen möglichst auszuschliessen. Da die Datei nur Read Berechtigungen auf Stufe Owner & Gruppe hat, müsste man vermutlich extra die Berechtigungen der Datei überschreiben um diese zu editieren. <br>
-Wenn man sich also selber ins Bein schiessen will, muss man dies bewusst machen. xD
+Ich vermute dass die Berechtigungen so restriktiv sind um unbeabsichtigt Anpassungen möglichst auszuschliessen.
