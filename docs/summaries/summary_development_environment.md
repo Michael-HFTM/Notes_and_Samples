@@ -1,7 +1,3 @@
-Hier ist eine ausführliche Zusammenfassung der Theorieinhalte aus deinem PDF in Markdown:
-
----
-
 # Zusammenfassung: Development Environment
 
 ## 1. Markdown Grundlagen
