@@ -225,3 +225,11 @@ Kilobyte = 1024
 ToDo: *Hier Hardlinks und Softlinks ergänzen*
 -  Hardlinks (Verknüpfung direk auf den Inhalt (Daten werden erst gelöscht wenn alle HArdlinks auf den Inhalt weg sind.))
 - Softlinks (Verknüpfung wie bei Windows)
+
+## Terminalmultiplexer tmux(1)
+tmux(1) hat zwei primäre Zwecke:
+1. Ermöglicht das Arbeiten mit mehreren Fenstern
+2. Programme laufen weiter selbst wenn SSH abbricht
+Hoch konfigurierbar mittels ~/.tmux.conf
+Eigenes Clipboard mit Copy-Paste
+(Ctrl+B)
