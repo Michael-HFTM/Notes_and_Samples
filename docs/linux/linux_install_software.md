@@ -12,6 +12,11 @@ bruno@server:software$ make
 bruno@server:software$ sudo make install
 ```
 
+
+> A **Makefile** in Linux is a script used by the **make** build automation tool to compile and build programs. It defines a set of rules and dependencies that specify how to generate executable files from source code.
+
+
+
 ### Das Rad nicht jedesmal neu erfinden -> Shared Libraries
 - Quelltext lässt sich nur übersetzen wenn Libraries vorliegen
 - Software A benötigt Version x.y von Library E
