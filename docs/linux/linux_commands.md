@@ -37,6 +37,13 @@
 - `ln` *(Link)* Erstellt Hard- & Softlinks
 - `diff` *(Differences)* Zeigt den Unterschied zwischen Dateien an 
 
+- Wörter zählen mit [wc(1)](https://www.man7.org/linux/man-pages/man1/wc.1.html)
+- Listen sortieren mit [sort(1)](https://man7.org/linux/man-pages/man1/sort.1.html)
+- Spalten auswählen mit [cut(1)](https://man7.org/linux/man-pages/man1/cut.1.html)
+- Tabellen bauen mit [paste(1)](https://man7.org/linux/man-pages/man1/paste.1.html)
+- Zeichen ersetzen mit [tr(1)](https://man7.org/linux/man-pages/man1/tr.1.html)
+- Dateien vergleichen mit [diff(1)](https://www.man7.org/linux/man-pages/man1/diff.1.html)
+
 
 ## Umleitungen
 **WICHTIG!**

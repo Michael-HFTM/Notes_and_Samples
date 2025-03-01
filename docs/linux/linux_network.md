@@ -20,13 +20,13 @@
 - Funktion des Default Gateways
     - Wenn Pakete nicht klar zugeordnet werden können, werden diese auf das "default Gateway" gesendet.<br><br>
 
-
 - Siehe auch:
     - [VLAN](https://de.wikipedia.org/wiki/Virtual_Local_Area_Network) 
     - [DHCP](https://de.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
     - [APIPA](https://de.wikipedia.org/wiki/Zeroconf#Microsoft_APIPA) (nie richtig umgesetzt)
 
 ## Grundlagen TCP/IP – OSI Layer 4
+
 - [TCP](https://de.wikipedia.org/wiki/Transmission_Control_Protocol) – Transmission Control Protocol (Handshake und Kommunikationsankündigung)
     - Zuverlässig
     - Verbindungorientiert
@@ -154,6 +154,6 @@ version: 2
 - Stellt sicher, dass die Uhr des Hosts stimmt
 - Regelmässige Synchronisation gegen NTP-Server
 - Stratum gibt Auskunft über Qualität der Zeitquelle
-- Moderne Kryptographie funktioniert ohne NTP nicht
+- Moderne Kryptographie funktioniert ohne NTP nicht (Zertifikate)
 - Zuständig in der Schweiz ist [METAS](https://www.metas.ch/metas/de/home/fabe/zeit-und-frequenz/time-dissemination.html)
 
