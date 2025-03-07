@@ -1,5 +1,16 @@
 # Linux commands
 
+## Umleitungen
+**WICHTIG!**
+- Ausgabe in eine Datei (überschreiben): `>` <br>
+Ex. `bruno@server:~$ ls > verzeichnis.txt`
+- Ausgabe in eine Datei (anhängen): `>>`<br>
+Ex. `bruno@server:~$ ls >> verzeichnis.txt`
+- Ausgabe auf Eingabe (Pipe) : `|`<br>
+Ex. `bruno@server:~$ ls | grep novelle.txt`
+- Eingabe aus einer Datei: `<`<br>
+Ex. `bruno@server:~$ mail –s “Testmail” bruno.flueckiger@hftm.ch < email.txt`
+
 ## General stuff
 - `whoami` shows the user logd in
 - `hostname` shows the name of the hosting system
@@ -43,18 +54,6 @@
 - Tabellen bauen mit [paste(1)](https://man7.org/linux/man-pages/man1/paste.1.html)
 - Zeichen ersetzen mit [tr(1)](https://man7.org/linux/man-pages/man1/tr.1.html)
 - Dateien vergleichen mit [diff(1)](https://www.man7.org/linux/man-pages/man1/diff.1.html)
-
-
-## Umleitungen
-**WICHTIG!**
-- Ausgabe in eine Datei (überschreiben): `>` <br>
-Ex. `bruno@server:~$ ls > verzeichnis.txt`
-- Ausgabe in eine Datei (anhängen): `>>`<br>
-Ex. `bruno@server:~$ ls >> verzeichnis.txt`
-- Ausgabe auf Eingabe (Pipe) : `|`<br>
-Ex. `bruno@server:~$ ls | grep novelle.txt`
-- Eingabe aus einer Datei: `<`<br>
-Ex. `bruno@server:~$ mail –s “Testmail” bruno.flueckiger@hftm.ch < email.txt`
 
 ## Usermanagement
 *LOGIN=user login name*
