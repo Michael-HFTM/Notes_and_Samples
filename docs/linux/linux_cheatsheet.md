@@ -1,0 +1,26 @@
+# Cheatsheet Rückblicksfragen
+
+- **File Descriptors 0, 1 und 2**: stdin (Eingabe), stdout (Ausgabe), stderr (Fehlerausgabe)  
+- **Pipe (|)**: Leitet die Ausgabe eines Befehls als Eingabe an einen anderen Befehl weiter  
+- **find(1) vs. grep(1)**: `find` sucht Dateien, `grep` sucht Muster in Dateien  
+- **UID 0**: root  
+- **Ärgerliches Dateiattribut für root**: `i` (immutable, verhindert Änderungen)  
+- **Gruppe in sudoers(5)**: `%gruppenname ALL=(ALL) ALL`  
+- **Permissions 2755 in Textform**: `rwxr-sr-x`  
+- **Private Key vs. Public Key**: Private Key bleibt geheim, Public Key wird verteilt  
+- **Weitverbreitete SSH-Software**: OpenSSH  
+- **SSH-Objekte mit Keys**: Hosts, Benutzer  
+- **Logical Volume Manager (LVM)**: Flexible Speicherverwaltung mit logischen Volumes  
+- **Inhalt eines Mountpoints bei Mount**: Wird überlagert, vorheriger Inhalt ist temporär nicht sichtbar  
+- **Bekannte Dateisysteme**: ext4, XFS, Btrfs, NTFS, FAT32, ZFS, ReiserFS  
+- **Datei für Quelltext-Übersetzung**: `Makefile`  
+- **Abhängigkeiten in Softwarepaketen**: Andere Pakete, die für die Funktion benötigt werden  
+- **OSI Layer**: 7 Schichten  
+- **Alternative zu Klassen**: Strukturen, Protokolle (z. B. in Go, Rust)  
+- **Datei zur Port-Namens-Zuordnung**: `/etc/services`  
+- **Tools für DNS-Abfragen**: `dig`, `nslookup`, `host`  
+- **Frau des DHCP-Servers**: BOOTP  
+- **Warum exakte Zeit wichtig?**: Sicherheit (TLS), Synchronisation, Protokollgenauigkeit  
+- **Alternativen zu Softwarepaketen**: Container (Docker), statische Binaries, AppImages  
+- **Prozess mit PID 1**: `init` oder `systemd`  
+- **Andere Namen für Dienste**: Daemons, Services
