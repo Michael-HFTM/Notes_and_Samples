@@ -1,0 +1,6 @@
+Land Stück Stückpreis
+Schweiz 450 29.50
+Deutschland 4578 21.60
+Österreich 3218 22.15
+Italien 421 23.75
+Frankreich 2641 24.45
